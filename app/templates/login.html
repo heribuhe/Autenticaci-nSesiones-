@@ -1,0 +1,10 @@
+{% extends "maestra.html" %}
+{% block content %}
+<h2>Iniciar sesión</h2>
+<form action="{{ url_for('auth.login') }}" method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.username.label }} {{ form.username() }}<br>
+    {{ form.password.label }} {{ form.password() }}<br>
+    {{ form.submit() }}
+</form>
+{% endblock %}
